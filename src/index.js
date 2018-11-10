@@ -19,8 +19,8 @@ class App extends Component {
     return (
       <div>
         <Score score={this.state.count} />
-        <ChangeScore action="less" countFunc={this.changeCount} />
         <ChangeScore action="more" countFunc={this.changeCount} />
+        <ChangeScore action="less" countFunc={this.changeCount} />
       </div>
     );
   }
