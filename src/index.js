@@ -12,8 +12,8 @@ class App extends Component {
     this.resetCount = this.resetCount.bind(this);
   }
 
-  changeCount(actn) {
-    this.setState({ count: this.state.count + actn });
+  changeCount(amnt) {
+    this.setState({ count: this.state.count + amnt });
   }
 
   resetCount() {

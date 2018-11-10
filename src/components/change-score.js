@@ -2,12 +2,12 @@ import React from "react";
 
 export default function ChangeScore(props) {
   function handleClick() {
-    let actn = props.action;
-    var num;
+    let amnt = props.action;
+    let num;
 
-    if (actn === "less") {
+    if (amnt === "less") {
       num = -1;
-    } else if (actn === "more") {
+    } else if (amnt === "more") {
       num = 1;
     }
     props.countFunc(num);
