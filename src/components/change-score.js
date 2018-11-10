@@ -1,8 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default function ChangeScore(props) {
-  function handleClick() {
-    let amnt = props.action;
+const ChangeScore = props => {
+  // no need to write function in this case
+  const handleClick = () => {
+    const amnt = props.action; // you don't change this
     let num;
 
     if (amnt === "less") {
@@ -11,15 +13,18 @@ export default function ChangeScore(props) {
       num = 1;
     }
     props.countFunc(num);
-  }
+  };
 
-  function nameButton() {
+  const nameButton = () => {
     if (props.action === "less") {
       return "Decrease";
     } else if (props.action === "more") {
       return "Increase";
     } else return "nicetry";
-  }
+    // you can do a ternary here for two conditions.
+    // return props.action === "less" ? "Decrease" : "Increase";
+    // not sure what you wanted to cover with the 'nicetry' one.
+  };
 
   return (
     <div className="text-center">
@@ -28,4 +33,11 @@ export default function ChangeScore(props) {
       </button>
     </div>
   );
-}
+};
+
+ChangeScore.propTypes = {
+  action: PropTypes.string,
+  countFunc: PropTypes.func
+};
+
+export { ChangeScore };

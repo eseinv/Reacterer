@@ -1,25 +1,24 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import Score from "./components/score";
-import ChangeScore from "./components/change-score";
+import { Score } from "./components/score"; // functions are imported with {}
+import { ChangeScore } from "./components/change-score"; // functions are imported with {}
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = { count: 0 };
-    this.changeCount = this.changeCount.bind(this);
-    this.resetCount = this.resetCount.bind(this);
   }
 
-  changeCount(amnt) {
+  changeCount = amnt => {
     this.setState({ count: this.state.count + amnt });
-  }
+  };
 
-  resetCount() {
+  resetCount = () => {
     this.setState({ count: 0 });
-  }
+  };
 
+  // arrow functions don't have their own this by default. No need to use regular
   render() {
     return (
       <div>
@@ -30,5 +29,6 @@ class App extends Component {
     );
   }
 }
+// you can use <React.Fragment> to wrap Score, ChangeScore, just in case you don't wanna render more DIVs.
 
 ReactDOM.render(<App />, document.querySelector(".container"));
