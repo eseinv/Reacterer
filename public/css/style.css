@@ -1,3 +1,7 @@
 .bstyle {
   width: 100px;
 }
+
+.hand {
+  cursor: pointer;
+}
