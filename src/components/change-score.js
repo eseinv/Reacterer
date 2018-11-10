@@ -10,5 +10,6 @@ export default function ChangeScore(props) {
     }
     props.countFunc(num);
   }
+
   return <button onClick={handleClick}>Button</button>;
 }
