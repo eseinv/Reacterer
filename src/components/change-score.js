@@ -2,9 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ChangeScore = props => {
-  // no need to write function in this case
   const handleClick = () => {
-    const amnt = props.action; // you don't change this
+    const amnt = props.action;
     let num;
 
     if (amnt === "less") {
@@ -16,14 +15,7 @@ const ChangeScore = props => {
   };
 
   const nameButton = () => {
-    if (props.action === "less") {
-      return "Decrease";
-    } else if (props.action === "more") {
-      return "Increase";
-    } else return "nicetry";
-    // you can do a ternary here for two conditions.
-    // return props.action === "less" ? "Decrease" : "Increase";
-    // not sure what you wanted to cover with the 'nicetry' one.
+    return props.action === "less" ? "Decrease" : "Increase";
   };
 
   return (
