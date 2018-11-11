@@ -21,8 +21,8 @@ class ManualScore extends Component {
 
   render() {
     return (
-      <div className="text-center">
-        <div className="input-group mb-3 w-25">
+      <div className="text-center mx-auto mt-2 countstyle">
+        <div className="input-group mb-3">
           <input
             className="form-control"
             type="text"
