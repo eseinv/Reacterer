@@ -7,11 +7,19 @@ import { GalleryList } from "./components/gallery-list";
 import { GalleryPreview } from "./components/gallery-preview";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
-    this.state = { count: 0 };
+    this.state = {
+      count: 0,
+      itemList: ["Item 1", "Item 2", "Item 3"],
+      currentItem: null
+    };
   }
+
+  selectItem = item => {
+    this.setState({ currentItem: item });
+  };
 
   changeCount = amnt => {
     this.setState({ count: this.state.count + amnt });
@@ -51,7 +59,11 @@ class App extends Component {
           <p>Select an item and it will appear in the gallery preview. </p>
           <hr />
           <div className="row">
-            <GalleryList />
+            <GalleryList
+              selectItem={this.selectItem}
+              itemList={this.state.itemList}
+              currentItem={this.state.currentItem}
+            />
             <GalleryPreview />
           </div>
         </div>
