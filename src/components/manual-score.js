@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class ManualScore extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class ManualScore extends Component {
           <input
             className="form-control"
             type="text"
-            placeholder="Enter count to preset..."
+            placeholder="Enter value to preset..."
             value={this.state.inputTerm}
             onChange={event => this.handleChange(event.target.value)}
           />
@@ -45,8 +46,8 @@ class ManualScore extends Component {
   }
 }
 
-// ManualScore.propTypes = {
-//   manualApply: PropTypes.func
-// };
+ManualScore.propTypes = {
+  manualApply: PropTypes.func
+};
 
 export { ManualScore };

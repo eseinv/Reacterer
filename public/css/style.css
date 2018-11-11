@@ -9,3 +9,8 @@
 .countstyle {
   width: 300px;
 }
+
+.prevbox {
+  background: #eee;
+  display: inline-block;
+}
