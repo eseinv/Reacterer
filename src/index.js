@@ -20,7 +20,7 @@ class App extends Component {
   };
 
   manualCount = amnt => {
-    this.setState({ count: amnt });
+    this.setState({ count: parseInt(amnt, 10) });
   };
 
   // arrow functions don't have their own this by default. No need to use regular
