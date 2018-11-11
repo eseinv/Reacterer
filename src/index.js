@@ -5,14 +5,15 @@ import { ChangeScore } from "./components/change-score";
 import { ManualScore } from "./components/manual-score";
 import { GalleryList } from "./components/gallery-list";
 import { GalleryPreview } from "./components/gallery-preview";
-import { ThousandItems } from "./jsonfile";
+import { GalleryItems } from "./jsonfile";
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       count: 0,
-      itemList: ThousandItems,
-      currentItem: null
+      itemList: GalleryItems,
+      currentItem: GalleryItems[1]
     };
   }
 
@@ -36,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="counter d-none">
+        <div className="counter">
           <h1 className="display-5 text-capitalize"> counter </h1>
           <p>
             Use the buttons to count up or down. Click the text to reset count
