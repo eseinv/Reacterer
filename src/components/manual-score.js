@@ -8,7 +8,7 @@ class ManualScore extends Component {
   }
 
   handleChange = inputTerm => {
-    this.setState({ inputTerm });
+    this.setState({ inputTerm: inputTerm.replace(/\D/, "") });
   };
 
   applyCount = () => {
