@@ -5,14 +5,13 @@ import { ChangeScore } from "./components/change-score";
 import { ManualScore } from "./components/manual-score";
 import { GalleryList } from "./components/gallery-list";
 import { GalleryPreview } from "./components/gallery-preview";
-
+import { ThousandItems } from "./jsonfile";
 class App extends Component {
   constructor() {
     super();
-
     this.state = {
       count: 0,
-      itemList: ["Item 1", "Item 2", "Item 3"],
+      itemList: ThousandItems,
       currentItem: null
     };
   }
@@ -64,7 +63,7 @@ class App extends Component {
               itemList={this.state.itemList}
               currentItem={this.state.currentItem}
             />
-            <GalleryPreview />
+            <GalleryPreview currentItem={this.state.currentItem} />
           </div>
         </div>
       </div>
