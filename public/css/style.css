@@ -1,7 +1,3 @@
-.bstyle {
-  width: 100px;
-}
-
 .hand {
   cursor: pointer;
 }
@@ -14,3 +10,6 @@
   background: #eee;
   display: inline-block;
 }
+
+/* DO NOT DO THIS. By default, most of the time, you wanna rm -rf public folder before build.
+All your css would have been removed */
