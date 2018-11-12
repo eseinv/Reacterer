@@ -37,27 +37,34 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="counter">
+        <div className="counter card p-3">
           <h1 className="display-5 text-capitalize"> counter </h1>
           <p>
             Use the buttons to count up or down. Click the text to reset count
             to 0. Use the input to preset a value.
           </p>
-          <hr />
-          <Score score={this.state.count} reset={this.resetCount} />
-          <ChangeScore action="more" countFunc={this.changeCount} />
-          <ChangeScore action="less" countFunc={this.changeCount} />
-          <ManualScore
-            manualApply={this.manualCount}
-            realCount={this.state.count}
-          />
-          <hr />
+          <div className="card-body">
+            <Score score={this.state.count} reset={this.resetCount} />
+            <div className="row justify-content-around">
+              <div className="col-6 text-center">
+                <ChangeScore action="less" countFunc={this.changeCount}>
+                  Decrease
+                </ChangeScore>
+                <ChangeScore action="more" countFunc={this.changeCount}>
+                  Increase
+                </ChangeScore>
+              </div>
+            </div>
+            <ManualScore
+              manualApply={this.manualCount}
+              realCount={this.state.count}
+            />
+          </div>
         </div>
 
-        <div className="gallery">
-          <h1 className="display-5 mt-5 text-capitalize"> gallery browser </h1>
+        <div className="gallery card p-3 mt-3">
+          <h1 className="display-5 text-capitalize"> gallery browser </h1>
           <p>Select an item and it will appear in the gallery preview. </p>
-          <hr />
           <div className="row">
             <GalleryList
               selectItem={this.selectItem}
