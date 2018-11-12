@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 // const checkShadow = props => {
 //   if (props) {
@@ -18,16 +18,16 @@ import styled from "styled-components";
 
 const GalleryItem = props => {
   const listItems = props.list.map(listItem => (
-    <li
+    <button
       selected={listItem === props.currentItem}
       key={listItem}
-      className={`list-group-item ${
+      className={`btn btn-light btn-block ${
         listItem === props.currentItem ? "active" : ""
       }`}
       onClick={() => props.select(listItem)}
     >
       {listItem}
-    </li>
+    </button>
   ));
 
   return listItems;
