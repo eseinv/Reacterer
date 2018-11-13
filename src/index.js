@@ -34,7 +34,12 @@ class App extends Component {
     this.setState({ count: parseInt(amnt, 10) });
   };
 
+<<<<<<< HEAD
   function Home() {
+=======
+  // arrow functions don't have their own this by default. No need to use regular
+  render() {
+>>>>>>> parent of f0f1e34... Imported react-router
     return (
       <div>
 <<<<<<< HEAD
