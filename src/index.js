@@ -35,11 +35,15 @@ class App extends Component {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   function Home() {
 =======
   // arrow functions don't have their own this by default. No need to use regular
   render() {
 >>>>>>> parent of f0f1e34... Imported react-router
+=======
+  render() {
+>>>>>>> parent of 6820f47... Updates
 =======
   render() {
 >>>>>>> parent of 6820f47... Updates
