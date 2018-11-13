@@ -6,6 +6,7 @@ import { ManualScore } from "./components/manual-score";
 import { GalleryList } from "./components/gallery-list";
 import { GalleryPreview } from "./components/gallery-preview";
 import { GalleryItems } from "./jsonfile";
+import { BasicExample } from "./components/basic-example";
 
 class App extends Component {
   constructor() {
@@ -37,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="counter card p-3">
+        <div className="counter card p-3 d-none">
           <h1 className="display-5 text-capitalize"> counter </h1>
           <p>
             Use the buttons to count up or down. Click the text to reset count
@@ -62,7 +63,7 @@ class App extends Component {
           </div>
         </div>
 
-        <div className="gallery card p-3 mt-3">
+        <div className="gallery card p-3 mt-3 d-none">
           <h1 className="display-5 text-capitalize"> gallery browser </h1>
           <p>Select an item and it will appear in the gallery preview. </p>
           <div className="row">
@@ -74,6 +75,7 @@ class App extends Component {
             <GalleryPreview currentItem={this.state.currentItem} />
           </div>
         </div>
+        <BasicExample score={this.state.count} />
       </div>
     );
   }
