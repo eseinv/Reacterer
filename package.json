@@ -7,9 +7,12 @@
     "react-dom": "^16.6.1",
 <<<<<<< HEAD
     "react-router": "^4.3.1",
+<<<<<<< HEAD
     "react-router-dom": "^4.3.1",
 =======
 >>>>>>> parent of f0f1e34... Imported react-router
+=======
+>>>>>>> parent of 6820f47... Updates
     "react-scripts": "2.1.1",
     "styled-components": "^4.0.3"
   },
