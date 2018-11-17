@@ -29,11 +29,15 @@ class Counter extends Component {
   };
 
   resetCount = () => {
-    this.setState({ count: 0 });
+    this.setState({ count: 0 }, () =>
+      localStorage.setItem("count", this.state.count)
+    );
   };
 
   manualCount = amnt => {
-    this.setState({ count: parseInt(amnt, 10) });
+    this.setState({ count: parseInt(amnt, 10) }, () =>
+      localStorage.setItem("count", this.state.count)
+    );
   };
 
   render() {
