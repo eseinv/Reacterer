@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { GalleryList } from "./gallery-list";
-import { GalleryPreview } from "./gallery-preview";
+import GalleryPreview from "./gallery-preview";
 import { GalleryItems } from "../../jsonfile";
 
 class Gallery extends Component {
@@ -8,7 +8,7 @@ class Gallery extends Component {
     super();
     this.state = {
       itemList: GalleryItems,
-      currentItem: GalleryItems[1]
+      currentItem: null
     };
   }
   selectItem = item => {
