@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Counter } from "./pages/counter";
 import { Gallery } from "./pages/gallery";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Dashpage } from "./pages/dashpage";
 
 class App extends Component {
   render() {
@@ -42,6 +43,7 @@ class App extends Component {
             </div>
           </nav>
 
+          <Route exact path="/" component={Dashpage} />
           <Route path="/counter" component={Counter} />
           <Route path="/gallery" component={Gallery} />
         </div>
