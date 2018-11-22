@@ -5,7 +5,7 @@ import { Gallery } from "./pages/gallery";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Dashpage } from "./pages/dashpage";
 
-className App extends Component {
+class App extends Component {
   render() {
     return (
       <Router>
