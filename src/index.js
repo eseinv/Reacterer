@@ -5,19 +5,19 @@ import { Gallery } from "./pages/gallery";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Dashpage } from "./pages/dashpage";
 
-class App extends Component {
+className App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="navbar-brand" href="#">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="navbar-brand" href="#">
               <Link className="nav-link" to="/">
                 Reacterer
               </Link>
             </div>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-toggle="collapse"
               data-target="#navbarNav"
@@ -25,16 +25,16 @@ class App extends Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon" />
+              <span className="navbar-toggler-icon" />
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
                   <Link className="nav-link" to="/counter">
                     Counter
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link className="nav-link" to="/gallery">
                     Gallery
                   </Link>
