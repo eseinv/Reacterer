@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Score } from './score';
 import { ChangeScore } from './change-score';
@@ -20,7 +19,7 @@ class Counter extends Component {
 	}
 
 	loadCount = count => {
-		this.setState({ count: parseInt(count) });
+		this.setState({ count: parseInt(count, 10) });
 	};
 
 	changeCount = amnt => {

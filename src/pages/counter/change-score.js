@@ -17,6 +17,7 @@ const ChangeScore = props => (
 ChangeScore.propTypes = {
 	action: PropTypes.string,
 	countFunc: PropTypes.func,
+	children: PropTypes.string,
 };
 
 export { ChangeScore };

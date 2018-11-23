@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 // import styled from "styled-components";
 
 // const checkShadow = props => {
@@ -17,20 +17,20 @@ import React from "react";
 // `;
 
 const GalleryItem = props => {
-  const listItems = props.list.map(listItem => (
-    <button
-      selected={listItem === props.currentItem}
-      key={listItem}
-      className={`btn btn-light btn-block ${
-        listItem === props.currentItem ? "active" : ""
-      }`}
-      onClick={() => props.select(listItem)}
-    >
-      {listItem}
-    </button>
-  ));
+	const listItems = props.list.map(listItem => (
+		<button
+			selected={listItem === props.currentItem}
+			key={listItem}
+			className={`btn btn-light btn-block ${
+				listItem === props.currentItem ? 'active' : ''
+			}`}
+			onClick={() => props.select(listItem)}
+		>
+			{listItem}
+		</button>
+	));
 
-  return listItems;
+	return listItems;
 };
 
 export { GalleryItem };
