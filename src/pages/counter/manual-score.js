@@ -50,6 +50,9 @@ class ManualScore extends Component {
 
 ManualScore.propTypes = {
 	manualApply: PropTypes.func,
+
+	realCount: PropTypes.number,
+
 };
 
 export { ManualScore };
