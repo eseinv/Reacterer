@@ -20,7 +20,7 @@ module.exports = {
 		},
 	},
 	rules: {
-		'prettier/prettier': ['error', prettierOptions],
+		'prettier/prettier': [0, prettierOptions],
 		'arrow-body-style': [2, 'as-needed'],
 		'class-methods-use-this': 0,
 		'comma-dangle': [2, 'always-multiline'],
@@ -33,7 +33,7 @@ module.exports = {
 		'import/no-webpack-loader-syntax': 0,
 		'import/prefer-default-export': 0,
 		'jsx-a11y/anchor-is-valid': [
-			'error',
+			'warning',
 			{
 				components: ['Link'],
 				specialLink: ['to', 'hrefLeft', 'hrefRight'],
@@ -51,7 +51,7 @@ module.exports = {
 			},
 		],
 		indent: [
-			'error',
+			0,
 			'tab',
 			{
 				SwitchCase: 1,

@@ -28,7 +28,6 @@
     "eslint-config-airbnb-base": "12.1.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-import-resolver-webpack": "0.10.0",
-    "eslint-plugin-prettier": "2.6.0",
     "file-loader": "2.0.0",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
@@ -121,6 +120,6 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-prettier": "^3.0.0"
+    "eslint-plugin-prettier": "^2.6.0"
   }
 }
