@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Current = styled.a`
+const Button = styled.a`
 	position: relative;
 	&:after {
 		content: '';
@@ -17,11 +17,13 @@ const Current = styled.a`
 const NavItems = ['Αρχική', 'Τιμοκατάλογος', 'Επικοινωνία'];
 
 const NavLi = NavItems.map((item, index) => (
-	<div className="col-2 text-center mt-4" key={index}>
-		<Current underline={index === 0}>{item}</Current>
+	<div className="d-flex h-100 align-items-center">
+		<Button className="ml-3 btn" underline={index === 0}>
+			{item}
+		</Button>
 	</div>
 ));
 
-const NavList = () => <div className="row">{NavLi}</div>;
+const NavList = () => <div className="row h-100">{NavLi}</div>;
 
 export { NavList };
