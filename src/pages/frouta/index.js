@@ -12,9 +12,7 @@ const all = ProductList.map((product, index) => (
 const Frouta = () => (
 	<React.Fragment>
 		<NavBar />
-		<div className="row content-justify-around text-justify mt-5">
-			{all}
-		</div>
+		<div className="row  text-justify mt-5 p-5">{all}</div>
 	</React.Fragment>
 );
 
