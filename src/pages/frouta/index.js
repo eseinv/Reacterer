@@ -3,7 +3,7 @@ import { ProductList } from '../../product-list';
 import { NavBar } from './nav-bar';
 
 const all = ProductList.map((product, index) => (
-	<div key={index} className="col-4">
+	<div key={index} className="col-4 text-justify">
 		{ProductList[index].id} <br /> {ProductList[index].name} <br />
 		{ProductList[index].info}
 	</div>
@@ -12,7 +12,9 @@ const all = ProductList.map((product, index) => (
 const Frouta = () => (
 	<React.Fragment>
 		<NavBar />
-		<div className="row  text-justify mt-5 p-5">{all}</div>
+		<div className="container">
+			<div className="row mt-5">{all}</div>
+		</div>
 	</React.Fragment>
 );
 

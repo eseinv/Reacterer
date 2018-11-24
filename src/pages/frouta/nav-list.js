@@ -9,17 +9,11 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-	display: inline;
+	display: inline-block;
 	color: #fff;
 	font-family: DejaVu Math TeX Gyre;
 	font-size: 20px;
 	margin-left: 10px;
-`;
-
-const NaviWrap = styled.div`
-	display: inline-block;
-	margin: 24.2px 0 0 30px;
-	position: absolute;
 `;
 
 const Active = styled.span`
@@ -32,19 +26,30 @@ const Active = styled.span`
 	background: #fff;
 	margin-left: 10px;
 `;
+const Current = styled.a`
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background: ${props => (props.underline ? 'red' : 'transparent')};
+	}
+`;
 
+const Span = styled.span`
+	position: relative;
+`;
 const NavItems = ['Αρχική', 'Τιμοκατάλογος', 'Επικοινωνία'];
 
-const NavLi = NavItems.map((item, key) => (
-	<Li key={key}>
-		{item} <Active />
-	</Li>
+const NavLi = NavItems.map((item, index) => (
+	<div className="col-2 text-center mt-4" key={index}>
+		<Current underline={index === 0}>{item}</Current>
+	</div>
 ));
 
-const NavList = () => (
-	<NaviWrap>
-		<Ul>{NavLi}</Ul>
-	</NaviWrap>
-);
+const NavList = () => <div className="row">{NavLi}</div>;
 
 export { NavList };

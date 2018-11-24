@@ -9,10 +9,16 @@ const Nav = styled.nav`
 `;
 
 const NavBar = () => (
-	<Nav>
-		<NavBrand />
-		<NavList />
-	</Nav>
+	<div className="container-fluid">
+		<Nav className="row">
+			<div className="col-4">
+				<NavBrand />
+			</div>
+			<div className="col-8">
+				<NavList />
+			</div>
+		</Nav>
+	</div>
 );
 
 export { NavBar };

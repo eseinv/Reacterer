@@ -2,18 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import fp from './images/fp.png';
 
-const LogoWrap = styled.div`
-	height: 80px;
-	width: 60px;
-	margin: 0 0 0 100px;
-	display: inline-block;
-	position: absolute;
-`;
-
 const FP = styled.img`
-	height: 60.46px;
-	width: 60px;
-	display: inline-block;
+	width: 70px;
+	height: auto;
 	margin-top: 10px;
 `;
 
@@ -25,34 +16,35 @@ const BrandDiv = styled.div`
 	line-height: 0.8;
 `;
 
-const BrandName = styled.span`
+const BrandName = styled.p`
 	color: #fff;
 	font-size: 35px;
 	font-family: Amiri;
 	font-style: italic;
 	font-weight: bold;
 	letter-spacing: 1.2px;
-	display: inline-block;
-	padding: 26px 0 0 0;
+	margin-bottom: 0;
+	line-height: 1;
+	margin-top: 14px;
 `;
 
-const BrandPhrase = styled.span`
+const BrandPhrase = styled.p`
 	color: #fff;
 	font-size: 14px;
-	display: inline-block;
 	font-family: DejaVu Math TeX Gyre;
+	margin-bottom: 0;
 `;
 
 const NavBrand = () => (
-		<React.Fragment>
-			<LogoWrap>
-				<FP src={fp} />
-			</LogoWrap>
-			<BrandDiv>
-				<BrandName> FARMA PALATIA </BrandName>
-				<BrandPhrase> Εργαστήριο αποξηραμένων φρούτων </BrandPhrase>
-			</BrandDiv>
-		</React.Fragment>
-	);
+	<div className="row">
+		<div className="col-2 offset-2">
+			<FP src={fp} />
+		</div>
+		<div className="col-8">
+			<BrandName> FARMA PALATIA </BrandName>
+			<BrandPhrase> Εργαστήριο αποξηραμένων φρούτων </BrandPhrase>
+		</div>
+	</div>
+);
 
 export { NavBrand };

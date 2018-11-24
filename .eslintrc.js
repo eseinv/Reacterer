@@ -22,7 +22,7 @@ module.exports = {
 	rules: {
 		'prettier/prettier': [0, prettierOptions],
 
-'arrow-body-style': [1, 'as-needed'],
+		'arrow-body-style': [1, 'as-needed'],
 
 		'class-methods-use-this': 0,
 		'comma-dangle': [1, 'always-multiline'],
@@ -80,6 +80,7 @@ module.exports = {
 		'require-yield': 0,
 		'react/prop-types': 1,
 		'react/prefer-stateless-function': 1,
+		'no-unused-vars': 0,
 	},
 	settings: {
 		'import/resolver': {
