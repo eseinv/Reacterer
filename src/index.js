@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Counter } from './pages/counter';
 import { Gallery } from './pages/gallery';
 import { Dashpage } from './pages/dashpage';
+import { Frouta } from './pages/frouta';
 
 const App = () => (
 	<Router>
@@ -37,6 +38,11 @@ const App = () => (
 								Gallery
 							</Link>
 						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/frouta">
+								Frouta
+							</Link>
+						</li>
 					</ul>
 				</div>
 			</nav>
@@ -44,6 +50,7 @@ const App = () => (
 			<Route exact path="/" component={Dashpage} />
 			<Route path="/counter" component={Counter} />
 			<Route path="/gallery" component={Gallery} />
+			<Route path="/frouta" component={Frouta} />
 		</div>
 	</Router>
 );

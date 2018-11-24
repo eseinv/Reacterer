@@ -15,8 +15,8 @@ const GalleryList = props => (
 );
 
 GalleryList.propTypes = {
-	itemList: PropTypes.func,
-	selectItem: PropTypes.string,
+	itemList: PropTypes.array,
+	selectItem: PropTypes.func,
 	currentItem: PropTypes.string,
 };
 
