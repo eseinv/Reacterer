@@ -3,17 +3,9 @@ import styled from 'styled-components';
 import fp from './images/fp.png';
 
 const FP = styled.img`
-	width: 70px;
+	width: 65px;
 	height: auto;
 	margin-top: 10px;
-`;
-
-const BrandDiv = styled.div`
-	margin-left: 180px;
-	display: inline-block;
-	height: 80px;
-	max-width: 290px;
-	line-height: 0.8;
 `;
 
 const BrandName = styled.p`
