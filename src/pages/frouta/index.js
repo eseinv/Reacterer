@@ -1,21 +1,29 @@
 import React from 'react';
 import { ProductList } from '../../product-list';
 import { NavBar } from './nav-bar';
+import fp from './images/fp.png';
 
 const all = ProductList.map((product, index) => (
 	<div key={index} className="col-4 text-justify">
-		{ProductList[index].id} <br /> {ProductList[index].name} <br />
-		{ProductList[index].info}
+		<div className="card">
+			<img
+				className="card-img-top w-25 mt-4 ml-4"
+				src={fp}
+				alt="Card cap"
+			/>
+			<div className="card-body">
+				<h5 className="card-title">{ProductList[index].name}</h5>
+				<p className="card-text">{ProductList[index].info}</p>
+			</div>
+		</div>
 	</div>
 ));
 
 const Frouta = () => (
-	<React.Fragment>
+	<div>
 		<NavBar />
-		<div className="container">
-			<div className="row mt-5">{all}</div>
-		</div>
-	</React.Fragment>
+		<div className="row container-fluid">{all}</div>
+	</div>
 );
 
 export { Frouta };

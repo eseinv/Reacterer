@@ -17,7 +17,7 @@ class Gallery extends Component {
 
 	render() {
 		return (
-			<div className="gallery card p-3 mt-3">
+			<div className="gallery card p-3 mt-3 container">
 				<h1 className="display-5 text-capitalize"> gallery browser </h1>
 				<p>
 					Select an item and it will appear in the gallery preview.{' '}

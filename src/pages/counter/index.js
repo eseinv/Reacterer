@@ -41,8 +41,9 @@ class Counter extends Component {
 	};
 
 	render() {
+		//	eslint-disable-next-line
 		return (
-			<div className="counter card p-3">
+			<div className="counter card p-3 container">
 				<h1 className="display-5 text-capitalize"> counter </h1>
 				<p>
 					Use the buttons to count up or down. Click the text to reset

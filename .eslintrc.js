@@ -81,6 +81,16 @@ module.exports = {
 		'react/prop-types': 1,
 		'react/prefer-stateless-function': 1,
 		'no-unused-vars': 1,
+		'jsx-a11y/alt-text': [
+			1,
+			{
+				elements: ['img', 'object', 'area', 'input[type="image"]'],
+				img: ['Image'],
+				object: ['Object'],
+				area: ['Area'],
+				'input[type="image"]': ['InputImage'],
+			},
+		],
 	},
 	settings: {
 		'import/resolver': {
