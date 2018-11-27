@@ -22,7 +22,9 @@ const all = ProductList.map((product, index) => (
 const Frouta = () => (
 	<div>
 		<NavBar />
-		<div className="row container-fluid">{all}</div>
+		<div className="container-fluid">
+			<div className="row">{all}</div>
+		</div>
 	</div>
 );
 
