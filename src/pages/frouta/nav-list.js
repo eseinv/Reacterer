@@ -30,7 +30,7 @@ const NavItems = ['Αρχική', 'Τιμοκατάλογος', 'Επικοιν�
 const NavLi = NavItems.map((NavItem, index) => (
 	<div key={index} className="d-flex h-100 align-items-center">
 		<Button className="ml-3 btn" underline={index === 0}>
-			<Current is={index === '0'}>{NavItem}</Current>
+			<Current is={index === 0}>{NavItem}</Current>
 		</Button>
 	</div>
 ));
