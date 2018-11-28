@@ -11,6 +11,14 @@ const ProductBorder = styled.div`
 	}
 `;
 
+const H5 = styled.h5`
+	color: #707070;
+`;
+
+const P = styled.p`
+	color: #707070;
+`;
+
 function figureBorderRadius(i) {
 	let border;
 	if (i === 0) {
@@ -32,8 +40,8 @@ const ProductList = MainProductList.map((product, index) => (
 				alt={MainProductList[index].name}
 			/>
 			<div className="card-body">
-				<h5 className="card-title">{MainProductList[index].name}</h5>
-				<p className="card-text">{MainProductList[index].info}</p>
+				<H5 className="card-title">{MainProductList[index].name}</H5>
+				<P className="card-text">{MainProductList[index].info}</P>
 			</div>
 		</ProductBorder>
 	</div>

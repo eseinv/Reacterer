@@ -18,10 +18,10 @@ const Button = styled.div`
 `;
 
 const Current = styled.span`
-	color: ${props => (props.is ? '#fff' : '#000')};
+	color: ${props => (props.is ? '#fff' : '#eee')};
 	font-size: ${props => (props.is ? '105%' : '100%')};
 	&:hover {
-		color: ${props => (props.is ? '#fff' : '#eee')};
+		color: ${props => (props.is ? '#fff' : '#fff')};
 	}
 `;
 

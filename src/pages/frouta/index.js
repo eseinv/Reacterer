@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavBar } from './nav-bar';
 import { ProductList } from './product-list';
+import { Footer } from './footer';
 
 class Frouta extends React.Component {
 	constructor() {
@@ -20,6 +21,7 @@ class Frouta extends React.Component {
 				<div className="container">
 					<div className="row mt-5">{ProductList}</div>
 				</div>
+				<Footer />
 			</div>
 		);
 	}
