@@ -1,31 +1,28 @@
 import React from 'react';
-import { ProductList } from '../../product-list';
 import { NavBar } from './nav-bar';
-import fp from './images/fp.png';
+import { ProductList } from './product-list';
 
-const all = ProductList.map((product, index) => (
-	<div key={index} className="col-4 text-justify">
-		<div className="card">
-			<img
-				className="card-img-top w-25 mt-4 ml-4"
-				src={fp}
-				alt="Card cap"
-			/>
-			<div className="card-body">
-				<h5 className="card-title">{ProductList[index].name}</h5>
-				<p className="card-text">{ProductList[index].info}</p>
+class Frouta extends React.Component {
+	constructor() {
+		super();
+		this.state = { logState: true };
+	}
+	toggleLog = () => {
+		this.setState({ logState: !this.state.logState });
+	};
+	render() {
+		return (
+			<div>
+				<NavBar
+					logState={this.state.logState}
+					toggleLog={this.toggleLog}
+				/>
+				<div className="container">
+					<div className="row mt-5">{ProductList}</div>
+				</div>
 			</div>
-		</div>
-	</div>
-));
-
-const Frouta = () => (
-	<div>
-		<NavBar />
-		<div className="container-fluid">
-			<div className="row">{all}</div>
-		</div>
-	</div>
-);
+		);
+	}
+}
 
 export { Frouta };

@@ -1,4 +1,4 @@
-export const ProductList = [
+export const MainProductList = [
 	{
 		id: '1',
 		name: 'Πεστίλη ντομάτας',
