@@ -34,11 +34,11 @@ const ProductList = MainProductList.map((product, index) => (
 			<img
 				className="card-img-top w-25 mt-4 ml-4"
 				src={fp}
-				alt={MainProductList[index].name}
+				alt={product.name}
 			/>
 			<div className="card-body">
-				<H5 className="card-title">{MainProductList[index].name}</H5>
-				<P className="card-text">{MainProductList[index].info}</P>
+				<H5 className="card-title">{product.name}</H5>
+				<P className="card-text">{product.info}</P>
 			</div>
 		</ProductCard>
 	</div>
