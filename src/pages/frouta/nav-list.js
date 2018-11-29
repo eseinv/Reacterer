@@ -17,6 +17,9 @@ const Button = styled(Link)`
 	&:hover {
 		color: #fff;
 	}
+	&:focus {
+		box-shadow: none;
+	}
 `;
 
 const Current = styled.span`
