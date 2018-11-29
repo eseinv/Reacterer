@@ -1,13 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import signIn from './icons/sign-in-alt-solid.svg';
-import cart from './icons/shopping-cart-solid.svg';
-import { SignInAltSolid } from './icons/sign-in-alt-solid';
 
-const ActionIcon = styled.img`
-	max-width: 25px;
-`;
+import { SignInAltSolid } from './icons/sign-in-alt-solid';
 
 const NavActions = props => {
 	if (props.user) {

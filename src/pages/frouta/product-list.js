@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { MainProductList } from '../../main-product-list';
 import fp from './images/fp.png';
 
-const ProductBorder = styled.div`
-	border-radius: ${props => figureBorderRadius(props.i)};
+const ProductCard = styled.div`
+	border-radius: 5px;
 	&:hover {
 		cursor: pointer
-		box-shadow: 1px 1px 5px 1px #587c34;
+		box-shadow: 0 10px 30px 0 rgba(0,0,0,0.10);
 	}
 `;
 
@@ -27,19 +27,10 @@ It's almost never, so simply always use arrow functions
 4: UI/UX wise, I don't think you should round products in a row differently.
 Try adding 4 rows it'll look bad.
 */
-const figureBorderRadius = i => {
-	if (i === 0) {
-		return '15px 5px 5px 15px';
-	}
-	if (i === ProductList.length - 1) {
-		return '5px 15px 15px 5px';
-	}
-	return '5px 5px 5px 5px';
-};
 
 const ProductList = MainProductList.map((product, index) => (
-	<div key={index} className="col-4 text-justify">
-		<ProductBorder className="card" i={index}>
+	<div key={index} className="col-4 text-justify p-3">
+		<ProductCard className="card border-0" i={index}>
 			<img
 				className="card-img-top w-25 mt-4 ml-4"
 				src={fp}
@@ -49,7 +40,7 @@ const ProductList = MainProductList.map((product, index) => (
 				<H5 className="card-title">{MainProductList[index].name}</H5>
 				<P className="card-text">{MainProductList[index].info}</P>
 			</div>
-		</ProductBorder>
+		</ProductCard>
 	</div>
 ));
 

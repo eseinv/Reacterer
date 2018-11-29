@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SignInAltSolid = props => (
 	<svg
@@ -13,5 +14,9 @@ const SignInAltSolid = props => (
 		/>
 	</svg>
 );
+
+SignInAltSolid.propTypes = {
+	color: PropTypes.string,
+};
 
 export { SignInAltSolid };
