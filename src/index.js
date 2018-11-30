@@ -52,7 +52,7 @@ const App = () => (
 			<Route exact path="/" component={Dashpage} />
 			<Route path="/counter" component={Counter} />
 			<Route path="/gallery" component={Gallery} />
-			<Route path="/frouta" component={Frouta} />
+			<Route path="/frouta/" component={Frouta} />
 			<Route path="/frouta/pricelist" component={Pricelist} />
 			<Route path="/frouta/contact" component={Contact} />
 		</div>
