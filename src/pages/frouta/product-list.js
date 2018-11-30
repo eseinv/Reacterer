@@ -18,15 +18,6 @@ const H5 = styled.h5`
 const P = styled.p`
 	color: #707070;
 `;
-/* There's a few problems here.
-1: no need for 'fucntion' keyword. It's bad practice mostly cuz you mispell it
-2: You're checking 3 conditions when you should be checking two. Check what I did
-3: Really important - always use arrow function unless you specifically need to
-use `this` INSIDE the function, which shouldn't be THIS from the scope you're in.
-It's almost never, so simply always use arrow functions
-4: UI/UX wise, I don't think you should round products in a row differently.
-Try adding 4 rows it'll look bad.
-*/
 
 const ProductList = MainProductList.map((product, index) => (
 	<div key={index} className="col-4 text-justify p-3">

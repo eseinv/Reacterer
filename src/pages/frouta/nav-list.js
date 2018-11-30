@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Button = styled(Link)`
 	position: relative;
+	color: ${props => (props.active === 'true' ? '#fff' : '#eee')};
+	font-size: ${props => (props.active === 'true' ? '105%' : '100%')};
 	&:after {
 		content: '';
 		position: absolute;
@@ -12,7 +14,7 @@ const Button = styled(Link)`
 		width: 100%;
 		height: 3px;
 		background: ${props =>
-			props.underline === 'true' ? 'white' : 'transparent'};
+			props.active === 'true' ? 'white' : 'transparent'};
 	}
 	&:hover {
 		color: #fff;
@@ -22,32 +24,52 @@ const Button = styled(Link)`
 	}
 `;
 
-const Current = styled.span`
-	color: ${props => (props.active ? '#fff' : '#eee')};
-	font-size: ${props => (props.active ? '105%' : '100%')};
-	&:hover {
-		color: ${props => (props.active ? '#fff' : '#fff')};
-	}
-`;
-
 const NavItems = [
-	{ name: 'Αρχική', link: '/frouta/1' },
-	{ name: 'Τιμοκατάλογος', link: '/frouta/2' },
-	{ name: 'Επικοινωνία', link: '/frouta/3' },
+	{ name: 'Αρχική', link: '/frouta/' },
+	{ name: 'Τιμοκατάλογος', link: '/frouta/pricelist' },
+	{ name: 'Επικοινωνία', link: '/frouta/contact' },
 ];
 
-const NavLi = NavItems.map((item, index) => (
-	<div key={index} className="d-flex h-100 align-items-center">
+const NavLi = () => (
+	<div className="row h-100 align-items-center d-flex">
 		<Button
 			className="ml-3 btn"
-			underline={index === 0 ? 'true' : 'false'}
-			to={item.link}
+			active={
+				window.location.href === 'http://localhost:3000/frouta/'
+					? 'true'
+					: 'false'
+			}
+			to="/frouta/"
 		>
-			<Current active={index === 0}>{item.name}</Current>
+			Αρχική
+		</Button>
+
+		<Button
+			className="ml-3 btn"
+			active={
+				window.location.href === 'http://localhost:3000/frouta/'
+					? 'true'
+					: 'false'
+			}
+			to="/frouta/pricelist"
+		>
+			Τιμοκατάλογος
+		</Button>
+
+		<Button
+			className="ml-3 btn"
+			active={
+				window.location.href === 'http://localhost:3000/frouta/'
+					? 'true'
+					: 'false'
+			}
+			to="/frouta/contact"
+		>
+			Επικοινωνία
 		</Button>
 	</div>
-));
+);
 
 const NavList = () => <div className="row h-100">{NavLi}</div>;
 
-export { NavList };
+export { NavLi };

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { NavList } from './nav-list';
+import { NavLi } from './nav-list';
 import { NavBrand } from './nav-brand';
 import { NavActions } from './nav-actions';
 
@@ -24,7 +24,7 @@ const NavBar = props => (
 				<NavBrand />
 			</div>
 			<div className="col-5">
-				<NavList />
+				<NavLi />
 			</div>
 			<Button
 				onClick={() => props.toggleLog()}

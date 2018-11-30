@@ -5,6 +5,8 @@ import { Counter } from './pages/counter';
 import { Gallery } from './pages/gallery';
 import { Dashpage } from './pages/dashpage';
 import { Frouta } from './pages/frouta';
+import { Pricelist } from './pages//frouta/pricelist';
+import { Contact } from './pages/frouta/contact';
 
 const App = () => (
 	<Router>
@@ -51,6 +53,8 @@ const App = () => (
 			<Route path="/counter" component={Counter} />
 			<Route path="/gallery" component={Gallery} />
 			<Route path="/frouta" component={Frouta} />
+			<Route path="/frouta/pricelist" component={Pricelist} />
+			<Route path="/frouta/contact" component={Contact} />
 		</div>
 	</Router>
 );
